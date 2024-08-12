@@ -12,12 +12,19 @@ Nice Gadget is an e-commerce website where users can browse and purchase phones,
 - React Pagination
 - React-i18next(translate page EN/UK)
 
-## Preview
-[Link to the live preview](#)  <!-- Replace with your actual preview link -->
+## DEMO LINK
+https://github.com/sa4ok-1/React-Product_Catalog-v_2.0/tree/develop
+
+##Preview 
+https://sa4ok-1.github.io/React-Product_Catalog-v_2.0/
 
 ## Launch Instructions
 To run this project locally:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/nice-gadget.git
+   git clone https://sa4ok-1.github.io/React-Product_Catalog-v_2.0/
+
+   npm install
+   
+   npm run build
