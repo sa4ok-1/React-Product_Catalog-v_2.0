@@ -1,0 +1,65 @@
+@import "../../styles/utils/mixins";
+
+  
+
+.favourite {
+  &__links {
+    height: 80px;
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+  }
+
+  &_title {
+    font-family: "Mont", sans-serif;
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 41px;
+    letter-spacing: -0.01em;
+    text-align: left;
+    color: #f1f2f9;
+    margin-bottom: 8px;
+  }
+  &_score_items {
+    font-family: "Mont", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 21px;
+    margin-bottom: 40px;
+    color: #75767f;
+  }
+
+  &__link {
+    display: block;
+
+    &_text {
+      color: #75767f;
+      font-size: 12px;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 600;
+      line-height: 15.34px;
+    }
+  }
+
+  &__block {
+    @include content-padding-inlain();
+  }
+}
+
+.cartEmpty {
+  font-family: "Mont";
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  font-size: 25px;
+  .cartEmptyImg {
+    width: 250px;
+    height: 200px;
+    @include on-tablet {
+      width: 450px;
+      height: 400px;
+    }
+  }
+}

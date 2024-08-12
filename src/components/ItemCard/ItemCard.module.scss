@@ -1,0 +1,484 @@
+@import "../../styles/utils/mixins";
+
+.productTitle {
+  font-size: 22px;
+  line-height: 30.8px;
+  margin-bottom: 32px;
+
+  @include on-tablet {
+    font-size: 32px;
+    line-height: 41px;
+    padding-bottom: 40px;
+  }
+
+  @include on-desktop {
+    padding-bottom: 40px;
+  }
+}
+.color {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+.backButton {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  width: 66px;
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  .icon {
+    width: 16px;
+    height: 16px;
+  }
+
+  .backText {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    color: #f1f2f9;
+    font-family: "Mont", sans-serif;
+  }
+}
+
+.productPage {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  @include content-padding-inlain();
+  font-family: "Mont", sans-serif;
+  @include on-tablet {
+    display: flex;
+    flex-direction: row;
+    // padding: 0;
+    // justify-content: space-between;
+  }
+  @include on-desktop {
+    padding: 0;
+  }
+
+  .top {
+    align-items: center;
+    margin: 0 auto;
+
+    @include on-tablet {
+      display: flex;
+      margin: 0;
+      align-items: flex-start;
+      width: 50%;
+    }
+
+    @include on-desktop {
+      max-width: 560px;
+      padding: 0;
+    }
+
+    .productImageWrapper {
+      display: flex;
+      padding-bottom: 16px;
+      order: 2;
+
+      @include on-tablet {
+        min-width: 287px;
+      }
+
+      @include on-desktop {
+        min-width: 464px;
+        padding: 0;
+      }
+    }
+
+    .productImage {
+      display: flex;
+      width: 288px;
+      aspect-ratio: 1/1;
+      object-fit: contain;
+
+      @include on-tablet {
+        width: 90%;
+      }
+      @include on-desktop {
+        width: 90%;
+        padding: 0;
+      }
+    }
+
+    .gallery {
+      display: flex;
+      gap: 8px;
+
+      @media (max-width: 639px) {
+        justify-content: center;
+      }
+
+      @include on-tablet {
+        display: flex;
+        flex-direction: column;
+      }
+
+      @include on-desktop {
+        width: 100%;
+        gap: 16px;
+        padding: 0;
+      }
+    }
+
+    .galleryImage {
+      width: 51.2px;
+      height: 49px;
+      box-sizing: border-box;
+      border: solid 1px #c4c4c4;
+      cursor: pointer;
+      object-fit: contain;
+
+      &:hover {
+        @include my-hover(transform, scale(1.1));
+      }
+
+      @include on-tablet {
+        width: 32px;
+        height: 32px;
+        padding: 0;
+      }
+
+      @include on-desktop {
+        width: 80px;
+        height: 80px;
+        padding: 0;
+      }
+    }
+  }
+
+  .mainControls {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 40px;
+
+    @include on-tablet {
+      margin-top: 0;
+    }
+
+    @include on-desktop {
+      width: 320px;
+      padding: 0;
+      margin-left: 7px;
+    }
+
+    .colorsText {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 8px;
+      font-family: "Mont", sans-serif;
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 15px;
+      color: #75767f;
+    }
+
+    .ProdId {
+      @include on-desktop {
+        position: absolute;
+        right: 0;
+      }
+    }
+
+    .colors {
+      display: flex;
+      gap: 9px;
+      border-bottom: 1px solid #3b3e4a;
+      padding-bottom: 24px;
+      margin-bottom: 24px;
+
+      .color {
+        @include my-hover(transform, scale(1.1));
+      }
+
+    }
+
+    .capacity {
+      transition: background-color 0.3s ease;
+
+      .selectCapacity {
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 15.34px;
+        color: #75767f;
+        margin-bottom: 8px;
+      }
+
+      .capacityText {
+        display: flex;
+        gap: 8px;
+        padding-bottom: 24px;
+        // border-bottom: 1px solid #3b3e4a;
+      }
+
+      .capacity1 {
+        border: 1px solid #3b3e4a;
+        padding: 7px;
+        display: flex;
+        justify-content: center;
+        min-width: 56px;
+        max-width: 63px;
+
+
+        &:hover {
+          background-color: #3b3e4a;
+          @include my-hover(transform, scale(1.1));
+        }
+
+        // .capacity {
+        //   &:active {
+        //     color: #0F1121;
+        //     background-color: #fff;
+        //   }
+        // }
+      }
+    }
+
+    .price {
+      display: flex;
+      flex-direction: row;
+      gap: 8px;
+      margin-bottom: 24px;
+      padding-top: 24px;
+      border-top: 1px solid #4a4d58;
+
+      .newPrice {
+        font-size: 32px;
+        font-weight: 800;
+        line-height: 41px;
+        letter-spacing: -1%;
+        color: #f1f2f9;
+      }
+
+      .oldPrice {
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 28.12px;
+        text-decoration: line-through;
+        color: #89939a;
+      }
+    }
+
+    .productCardButtons {
+      display: flex;
+      padding-top: 8px;
+      margin-top: auto;
+      margin-bottom: 24px;
+      justify-content: center;
+
+      .productCardButtonsAdd {
+        min-width: 231px;
+        height: 48px;
+        background: #905bff;
+        border: none;
+        font-family: "Mont", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 21px;
+        text-align: center;
+        color: #f1f2f9;
+        margin-right: 8px;
+        transition: transform 0.5s, background 1s ease, color 1s ease;
+
+        &:hover {
+          background: #f1f2f9;
+          color: #905bff;
+        }
+
+        @include on-tablet {
+          min-width: 237px;
+        }
+
+        @include on-desktop {
+          min-width: 263px;
+          padding: 0;
+        }
+      }
+
+      .toFavorite {
+        height: 48px;
+        width: 48px;
+
+        @include my-hover(transform, scale(1.1));
+
+        .productCardAddToFavorite {
+          height: 48px;
+          width: 48px;
+        }
+      }
+
+      .productCardButtonsDisabled {
+        min-width: 231px;
+        height: 40px;
+        background: #905bff;
+        border: none;
+        font-family: "Mont", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 21px;
+        text-align: center;
+        background: rgba(50, 53, 66, 1);
+        color: #f1f2f9;
+        margin-right: 8px;
+
+        @include on-tablet-medium {
+          min-width: 180px;
+        }
+
+        @include on-desktop {
+          min-width: 263px;
+          padding: 0;
+        }
+      }
+    }
+
+    .shortInfo {
+      .shortInfoText {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .shortInfoTextItem {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 8px;
+        padding: 8px 0;
+        align-items: center;
+      }
+      .shortInfoTextItem1 {
+        font-family: "Mont", sans-serif;
+        align-items: center;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 15.34px;
+        color: #75767f;
+      }
+
+      .shortInfoTextItem2 {
+        font-family: "Mont", sans-serif;
+        align-items: center;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 15.34px;
+        color: #f1f2f9;
+        justify-self: end;
+      }
+    }
+  }
+}
+
+.infoWrapper {
+  display: flex;
+  flex-direction: column;
+  @include content-padding-inlain();
+  @include on-desktop {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0;
+  }
+
+  @include on-desktop {
+    gap: 64px;
+  }
+
+  .techInfo {
+    display: flex;
+    flex-direction: column;
+    margin-top: 56px;
+    border-radius: 8px;
+    @include on-desktop {
+      min-width: 50%;
+      padding: 0;
+    }
+
+    .techSpecs {
+      font-family: "Mont", sans-serif;
+      align-items: center;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 25.56px;
+      color: #f1f2f9;
+      border-bottom: 1px solid #3b3e4a;
+      padding-bottom: 16px;
+      margin-bottom: 24px;
+    }
+
+    .inlineGroup {
+      display: flex;
+      justify-content: space-between;
+      padding: 8px 0;
+      align-items: center;
+    }
+
+    .shortInfoTextItem3 {
+      font-family: "Mont", sans-serif;
+      align-items: center;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 15.34px;
+      color: #75767f;
+    }
+
+    .shortInfoTextItem4 {
+      font-family: "Mont", sans-serif;
+      align-items: center;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 15.34px;
+      color: #f1f2f9;
+    }
+  }
+
+  .productDetails {
+    margin-top: 56px;
+    border-radius: 8px;
+    @include on-desktop {
+      max-width: 50%;
+      padding: 0;
+    }
+
+    .section {
+      font-family: "Mont", sans-serif;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 15px;
+      color: #4a4d58;
+
+      .sectionAbout {
+        font-family: "Mont", sans-serif;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 25.56px;
+        color: #f1f2f9;
+        padding-bottom: 16px;
+        margin-bottom: 32px;
+        border-bottom: 1px solid #3b3e4a;
+      }
+
+      .sectionTitle {
+        font-family: "Mont", sans-serif;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 20.45px;
+        color: #f1f2f9;
+        margin-bottom: 16px;
+      }
+
+      .sectionText {
+        font-family: "Mont", sans-serif;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 21px;
+        color: #89939a;
+        margin-bottom: 16px;
+      }
+    }
+  }
+}

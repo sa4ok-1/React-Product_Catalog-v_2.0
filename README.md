@@ -1,4 +1,23 @@
-# Base layout template with Gulp, SCSS and Stylelint
-1. Create a repo using this template
-1. Replace `<your_account>` and `<repo_name>` with your Github username and the new repo name
-    - [DEMO LINK](https://<your_account>.github.io/<repo_name>/)
+# Nice Gadget
+
+## Project Description
+Nice Gadget is an e-commerce website where users can browse and purchase phones, accessories, and tablets. The site features a dynamic theme based on user preference, a responsive navigation bar, and a loading indicator for smooth page transitions.
+
+## Technologies Used
+- React
+- SCSS
+- React Router
+- Context API for theme management
+- React Swiper
+- React Pagination
+- React-i18next(translate page EN/UK)
+
+## Preview
+[Link to the live preview](#)  <!-- Replace with your actual preview link -->
+
+## Launch Instructions
+To run this project locally:
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/nice-gadget.git

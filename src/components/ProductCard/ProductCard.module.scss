@@ -1,0 +1,259 @@
+@import "../../styles/utils/mixins";
+
+.productCard {
+  display: grid;
+
+  box-sizing: border-box;
+  background: #161827;
+  text-align: center;
+  grid-column: 1/-1;
+  min-height: 440px;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  @include my-hover(transform, scale(1.05));
+
+  @include on-tablet {
+    padding: 23px;
+    grid-column: span 6;
+    min-height: 506px;
+  }
+
+  @include on-tablet-medium {
+    grid-column: span 4;
+    padding: 32px;
+  }
+
+  @include on-desktop {
+    grid-column: span 6;
+  }
+  .details {
+    cursor: pointer;
+  }
+
+  .productImage {
+    width: 224px;
+    padding-bottom: 8px;
+    object-fit: contain;
+    height: 130px;
+
+    @include on-tablet {
+      width: 165px;
+      height: 195px;
+    }
+
+    @include on-desktop {
+      width: 200px;
+    }
+  }
+
+  .productCardTitle {
+    margin-top: 24px;
+    font-family: "Mont", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 21px;
+    height: 35px;
+    text-align: left;
+    color: #f1f2f9;
+    padding-bottom: 8px;
+    width: 100%;
+
+    max-width: 224px;
+
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+
+    @include on-tablet-medium {
+      max-width: 165px;
+    }
+    @include on-desktop {
+      max-width: 208px;
+    }
+  }
+
+  .priceWrapper {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+    padding-bottom: 8px;
+  }
+
+  .productCardPrice {
+    font-family: "Mont", sans-serif;
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 30.8px;
+    text-align: left;
+    color: #f1f2f9;
+
+    padding-top: 16px;
+    padding-bottom: 8px;
+    margin-top: 8px;
+
+    max-width: 224px;
+
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+
+    @include on-tablet-medium {
+      max-width: 165px;
+    }
+    @include on-desktop {
+      max-width: 208px;
+    }
+  }
+
+  .oldPrice {
+    font-family: "Mont", sans-serif;
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 30.8px;
+    text-align: left;
+    color: #f1f2f9;
+    padding-top: 16px;
+    padding-bottom: 8px;
+    margin-top: 8px;
+    color: #89939a;
+    text-decoration: line-through;
+  }
+
+  .productCardUnderscore {
+    position: relative;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 100%;
+      border: 1px solid #3b3e4a;
+      position: absolute;
+      left: 0;
+    }
+  }
+
+  .productCardSpecs {
+    margin-top: 16px;
+
+    .productCardSpec {
+      margin-top: 8px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .productCardLabel {
+      font-family: "Mont", sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 15.34px;
+      text-align: left;
+      color: #75767f;
+    }
+
+    .productCardValue {
+      font-family: "Mont", sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      line-height: 15.34px;
+      text-align: right;
+      color: #f1f2f9;
+    }
+  }
+
+  .productCardButtons {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 8px;
+    margin-top: auto;
+
+    .productCardButtonsAdd {
+      width: 160px;
+      height: 40px;
+      background: #905bff;
+      border: none;
+      font-family: "Mont", sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 21px;
+      text-align: center;
+      color: #f1f2f9;
+      margin-right: 8px;
+      transition: transform 0.5s, background 1s ease, color 1s ease;
+
+      &:hover {
+        background: #f1f2f9;
+        color: #905bff;
+      }
+
+      @include on-tablet-medium {
+        min-width: 115px;
+      }
+
+      @include on-desktop {
+        width: 160px;
+      }
+    }
+
+    .toFavorite {
+      @include my-hover(transform, scale(1.1));
+    }
+
+    .productCardButtonsDisabled {
+      width: 160px;
+      height: 40px;
+      background: #905bff;
+      border: none;
+      font-family: "Mont", sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 21px;
+      text-align: center;
+      background: rgba(50, 53, 66, 1);
+      color: #f1f2f9;
+      margin-right: 8px;
+
+      @include on-tablet-medium {
+        min-width: 115px;
+      }
+
+      @include on-desktop {
+        width: 160px;
+      }
+    }
+  }
+}
+
+.light {
+  &_Product {
+    background-color: white;
+    border: 1px solid #d9dfe3;
+    transition: all 0.6s;
+    &:hover {
+      border: 1px solid #2d2e30;
+      transform: scale(1);
+    }
+  }
+}
+
+.lightTitle {
+  .productCardTitle {
+    color: #313237;
+  }
+  .productCardPrice {
+    color: black;
+  }
+}
+
+.lightValue {
+  color: black !important;
+}
+
+.lightProduct {
+  background: #313237 !important;
+  color: white !important;
+  &:hover {
+    transform: scale(1.04);
+    background: #5b5c63 !important;
+    color: white;
+  }
+}

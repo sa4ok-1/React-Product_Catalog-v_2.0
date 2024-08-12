@@ -1,0 +1,117 @@
+{
+  "header": {
+    "lang": {
+      "text": "Eng"
+    }
+  },
+
+  "nav": {
+    "home": {
+      "text": "home"
+    },
+    "phones": {
+      "text": "phones"
+    },
+    "tablets": {
+      "text": "tablets"
+    },
+    "accessories": {
+      "text": "accessories"
+    }
+  },
+  "slider": {
+    "text": " Welcome to Nice Gadgets store!"
+  },
+
+  "productCard": {
+    "price": "Актуальна ціна",
+    "oldPrice": "Повна вартість",
+
+    "screen": "Screen",
+    "capacity": "Capacity",
+    "ram": "RAM",
+    "button": {
+      "add": "Add to cart",
+      "added": "Added to cart"
+    }
+  },
+  "byCategory": {
+    "title": {
+      "text": "Shop by category"
+    },
+    "mobile": {
+      "text": "Mobile phones"
+    },
+    "models": {
+      "text": "models"
+    },
+    "tablets": {
+      "text": "Tablets"
+    },
+    "24models": {
+      "text": "24 models"
+    },
+    "Accessories": {
+      "text": "Accessories"
+    },
+    "100models": {
+      "text": "100 models"
+    }
+  },
+  "hotPrice": {
+    "title": "Hot prices"
+  },
+  "location": {
+    "home": "Home",
+    "phones": "phones",
+    "tablets": "tablets",
+    "accessories": "accessories",
+    "cart": "Cart"
+  },
+  "newModels": {
+    "text": " Brand new models"
+  },
+  "pagePhones": {
+    "title": "Mobile phones"
+  },
+  "pageTablets": {
+    "title": "Tablets"
+  },
+  "pageAcc": {
+    "title": "Accessories"
+  },
+  "sortBy": {
+    "title": "Sort by",
+    "newest": "Newest",
+    "alphabetically": "Alphabetically",
+    "cheapest": "Cheapest",
+    "items": "Items on page",
+    "all": "All"
+  },
+  "cart": {
+    "cart": "Cart",
+    "text": "Cart is empty",
+    "checkout": "Checkout",
+    "totalItems": "Total for {{count}} items"
+  },
+  "favourites": {
+    "title": "favourites",
+    "empty": "   Favourites are empty",
+    "items": "item",
+    "items_plural": "items"
+  },
+  "footer": {
+    "github": {
+      "text": "Github"
+    },
+    "contacts": {
+      "text": "Contacts"
+    },
+    "rights": {
+      "text": "Rights"
+    },
+    "back": {
+      "text": "Back to top"
+    }
+  }
+}

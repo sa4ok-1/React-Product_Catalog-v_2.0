@@ -1,0 +1,17 @@
+.button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  &:focus {
+    outline: none;
+  }
+}
+.themeButton {
+  width: 20px;
+  height: 20px;
+}

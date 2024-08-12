@@ -1,0 +1,291 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+*::before,
+*::after {
+  display: inline-block;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  line-height: 1;
+
+  //text-rendering: optimizeLegibility;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+input,
+button,
+textarea {
+  font-size: inherit;
+  line-height: inherit;
+}
+button {
+  cursor: pointer;
+  color: inherit;
+  background-color: transparent;
+}
+a {
+  //display: inline-block;
+  color: inherit;
+  text-decoration: none;
+}
+ul li {
+  list-style: none;
+}
+img {
+  vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,800;1,800&display=swap");
+
+.header {
+  display: flex;
+}
+
+.dropdown__menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  z-index: 1000;
+  overflow: hidden;
+  background-color: #0f1121;
+  transition: all 0.3s;
+  &.light {
+    background-color: white;
+  }
+
+  .navbar {
+    position: absolute;
+    top: 80px;
+
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .icons {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 48px;
+
+    .icon {
+      @media (max-width: 639px) {
+        display: flex;
+        width: 50%;
+        border-top: 1px solid #3B3E4A;
+      }
+    }
+  }
+
+  .header__top {
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .themeButton {
+    margin-right: auto;
+  }
+}
+
+.header__top {
+  display: flex;
+  height: 64px;
+  align-items: center;
+  border-bottom: 1px solid #3B3E4A;
+  @media (max-width: 1199px) {
+    height: 48px;
+  }
+}
+
+.navbar {
+  display: flex;
+  margin-left: 24px;
+  gap: 64px;
+  @media (max-width: 1199px) {
+    gap: 32px;
+    margin-left: 0;
+  }
+  @media (max-width: 639px) {
+    display: none;
+  }
+}
+
+.nav__link {
+  color: #75767f;
+  font-size: 12px;
+  font-family: "Mont";
+  text-transform: uppercase;
+  font-weight: 800;
+  line-height: 11px;
+  position: relative;
+  transition: all 0.3s;
+
+  &:hover {
+    color: #f1f2f9;
+    &::after {
+      position: absolute;
+      content: "";
+      top: 34px;
+      background-color: #f1f2f9;
+      width: 100%;
+      height: 2px;
+      left: 0;
+      right: 0;
+      @media (max-width: 1199px) {
+        top: 26px;
+      }
+    }
+  }
+  &.light {
+    &:hover {
+      color: black;
+
+      &::after {
+        background-color: black;
+      }
+    }
+  }
+}
+.icons {
+  margin-left: auto;
+  display: flex;
+}
+
+.icon {
+  font-family: "Mont";
+  font-weight: 600;
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  @media (max-width: 1199px) {
+    width: 48px;
+    height: 48px;
+  }
+  @media (max-width: 639px) {
+    display: none;
+  }
+  &:nth-child(3) {
+    border-left: 1px solid #3B3E4A;
+    border-right: 1px solid #3B3E4A;
+  }
+  &:hover {
+    border-bottom: 2px solid white;
+  }
+  &.light {
+    &:hover {
+      border-bottom: 2px solid black;
+    }
+  }
+}
+.language {
+  border-left: 1px solid #3B3E4A;
+}
+
+.burger__menu {
+  display: none;
+
+  @media (max-width: 639px) {
+    display: block;
+    &__open {
+      display: block;
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-left: 1px solid #3B3E4A;
+    }
+    &__close {
+      display: none;
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-left: 1px solid #3B3E4A;
+    }
+  }
+}
+
+.themeButton {
+  margin-left: 30px;
+  margin-bottom: -5px;
+  @media (max-width: 639px) {
+    margin-left: 10px;
+  }
+}
+.iconCount {
+  display: inline-block;
+  min-width: 14px;
+  min-height: 14px;
+  background-color: rgba(235, 87, 87, 1);
+  border-radius: 50%;
+
+  font-size: 9px;
+  text-align: center;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  right: 15px;
+  top: 15px;
+}
+
+.favourit {
+  right: 75px;
+  @media (max-width: 1199px) {
+    right: 60px;
+  }
+}
+
+.developers {
+  width: 20px;
+  height: 20px;
+  margin-left: 20px;
+}
+
+.forUkrLink {
+  font-size: 10px !important;
+}
+
+.gapForUkr {
+  @media (max-width: 1199px) {
+    gap: 20px !important;
+  }
+}

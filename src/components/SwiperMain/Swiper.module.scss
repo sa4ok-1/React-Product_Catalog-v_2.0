@@ -1,0 +1,224 @@
+@import "../../styles/utils/mixins";
+@import "../../styles/fonts.scss";
+.swiper__prev,
+.swiper__next {
+  display: none;
+}
+
+.swiper__pagination {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  text-align: center;
+  transform: translateZ(0);
+  transition: opacity 0.3s;
+  z-index: 10;
+  bottom: -25px !important;
+  // border: 1px solid red;
+}
+
+.swiper-pagination-bullet {
+  // position: absolute;
+  cursor: pointer;
+  width: 14px;
+  height: 4px;
+  background: gray; /* default color for inactive bullets */
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background: #e5e5ea; /* color for active bullet */
+}
+.lightActive {
+  background: black
+}
+
+.swiper {
+  // max-width: 320px;
+  // max-height: 320px;
+  margin: 0 auto;
+  position: relative;
+  // padding-inline: 25px;
+  margin-bottom: 50px;
+   @include content-padding-inlain();
+
+  @include on-tablet {
+    // max-width: 690px;
+    // max-height: 190px;
+
+    .overlayImage {
+      width: 25px;
+      height: 25px;
+      transform: translate(0%, 5vh);
+      padding-top: 8px;
+    }
+
+    .swiper__prev {
+      cursor: pointer;
+      position: absolute;
+      top: 0;
+      display: flex;
+      left: 0px;
+      background-color: #323542;
+      width: 25px;
+      height: 100%;
+
+      @include on-tablet {
+        left: 0;
+      }
+    }
+
+    .swiper__next {
+      cursor: pointer;
+      background-color: #323542;
+      position: absolute;
+      top: 0;
+      display: flex;
+      width: 25px;
+      height: 100%;
+      right: 0px;
+      @include on-tablet {
+        right: 0px;
+      }
+    }
+  }
+
+  @include on-desktop {
+    max-width: 1136px;
+    max-height: 400px;
+
+    .overlayImage {
+      width: 25px;
+      height: 25px;
+      transform: translate(0%, 200px);
+    }
+
+    .swiper__prev {
+      position: absolute;
+      top: 0;
+      display: flex;
+       left: 0px;
+      background-color: #323542;
+      width: 25px;
+      height: 100%;
+    }
+
+    .swiper__next {
+      background-color: #323542;
+      position: absolute;
+      top: 0;
+      display: flex;
+      width: 25px;
+      height: 100%;
+      right: 0px;
+    }
+  }
+
+  &__slide {
+    width: 100% !important;
+    height: 320px;
+    display: grid;
+    display: flex;
+    border-radius: 15px;
+
+    @include on-tablet {
+      // width: 490px;
+      height: 190px;
+    }
+
+    @include on-desktop {
+      // width: 1040px;
+      height: 400px;
+    }
+
+//   @media (min-width: 700px) and (max-width: 1199px) {
+//     // width: 100%;
+//     height: 300px; 
+// }
+  }
+
+  &__wrapper {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+
+    &--1 {
+      background-color: black;
+    }
+
+    &--2 {
+      background-color: black;
+    }
+
+    &--3 {
+      background-color: black;
+    }
+  }
+
+  &__image {
+    background-size: contain;
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 8px;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &--1 {
+      background-image: url("../../images/icons/firstSlide.png");
+
+      @include on-tablet {
+        background-color: #323542;
+        background-image: url("../../images/icons/BannerOnlyIphone.png");
+        background-position: right;
+        background-size: cover;
+        width: 50%;
+        border-radius: 0 8px 8px 0;
+      }
+    }
+
+    &--2 {
+      background-image: url("../../images/icons/Apple_iPhone_15_Pro.webp");
+      background-position: bottom;
+    }
+
+    &--3 {
+      background-image: url("../../images/icons/cameraIphone.webp");
+      background-size: cover;
+    }
+  }
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  &__title {
+    font-family: "Mont", sans-serif;
+    color: #f1f2f9;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 41px;
+    letter-spacing: -0.01em;
+    padding: 0 16px;
+
+    @include on-tablet {
+      font-size: 48px;
+      line-height: 56px;
+      padding: 0 24px;
+      letter-spacing: 0.01em;
+    }
+  }
+}
+
+.light {
+  color: #313237;
+}
+
+.lightArrow {
+  background-color: white;
+}

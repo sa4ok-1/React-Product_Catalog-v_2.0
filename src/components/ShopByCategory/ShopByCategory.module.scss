@@ -1,0 +1,79 @@
+.section {
+  font-family: "Mont", sans-serif;
+  &__title {
+    font-family: "Mont", sans-serif;
+    padding-inline: 16px;
+    font-weight: 800;
+    font-size: 22px;
+    margin-top: 80px;
+    margin-bottom: 24px;
+    color: #f1f2f9;
+    @media (min-width: 640px) {
+      font-size: 32px;
+    }
+  }
+}
+
+.category {
+  padding-inline: 16px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin-bottom: 56px;
+
+  @media (min-width: 640px) {
+    padding-inline: 24px;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-bottom: 64px;
+  }
+
+  @media (min-width: 1200px) {
+    padding-inline: 0px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+    width: 1136px;
+    height: 508px;
+  }
+}
+
+.category__wrapper {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  cursor: pointer;
+  border-radius: 5px;
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  }
+
+  & > .category__photo {
+    margin-bottom: 24px;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  &:hover > .category__photo {
+    transform: scale(1.1);
+  }
+}
+
+.category__image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.category__title {
+  font-size: 20px;
+  margin-top: 24px;
+  margin-bottom: 4px;
+  padding-left: 2px;
+}
+
+.category__text {
+  color: gray;
+  margin-bottom: 4px;
+  padding-left: 2px;
+}

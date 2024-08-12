@@ -1,0 +1,126 @@
+{
+  "header": {
+    "lang": {
+      "text": "Укр"
+    }
+  },
+
+  "nav": {
+    "home": {
+      "text": "Домашня"
+    },
+    "phones": {
+      "text": "Телефони"
+    },
+    "tablets": {
+      "text": "Планшети"
+    },
+    "accessories": {
+      "text": "Аксесуари"
+    }
+  },
+  "slider": {
+    "text": " Вітаємо в магазині Nice Gadgets!"
+  },
+
+  "productCard": {
+    "price": "Актуальна ціна",
+    "oldPrice": "Повна вартість",
+
+    "screen": "Екран",
+    "capacity": "Ємність",
+    "ram": "Оперативна пам'ять",
+    "button": {
+      "add": "В корзину",
+      "added": "Уже в корзині"
+    }
+  },
+  "newModels": {
+    "text": "Новинки"
+  },
+  "byCategory": {
+    "title": {
+      "text": "Покупки за категоріями"
+    },
+
+    "mobile": {
+      "text": "Мобільні телефони"
+    },
+    "models": {
+      "text": "Моделі"
+    },
+    "tablets": {
+      "text": "Планшети"
+    },
+    "24models": {
+      "text": "24 моделі"
+    },
+    "Accessories": {
+      "text": "Аксесуари"
+    },
+    "100models": {
+      "text": "100 моделей"
+    }
+  },
+  "hotPrice": {
+    "title": "Гарячі пропозиції"
+  },
+  "pagePhones": {
+    "title": "Мобільні телефони"
+  },
+  "pageTablets": {
+    "title": "Планшети"
+  },
+  "pageAcc": {
+    "title": " Аксесуари"
+  },
+
+  "location": {
+    "home": "Головна",
+    "phones": "телефони",
+    "tablets": "планшети",
+    "accessories": "аксесуари",
+    "cart": "Кошик"
+  },
+  "sortBy": {
+    "title": "Сортувати за",
+    "newest": "Нові",
+    "alphabetically": "Алфавітом",
+    "cheapest": "Дешевші",
+    "items": "на сторінці",
+    "all": "Усі"
+  },
+  "cart": {
+    "cart": "Корзина",
+    "text": "Корзина порожня",
+    "checkout": "Перейти до оплати",
+
+    "totalItems": "Разом за {{count}} {{item}}"
+  },
+  "items": {
+    "one": "товар",
+    "few": "товари",
+    "many": "товарів"
+  },
+  "favourites": {
+    "title": "Улюблені",
+    "empty": "Улюблені товари ще не додано",
+    "items_one": "товар",
+    "items_few": "товари",
+    "items_many": "товарів"
+  },
+  "footer": {
+    "github": {
+      "text": "Github"
+    },
+    "contacts": {
+      "text": "Контакти"
+    },
+    "rights": {
+      "text": "Права"
+    },
+    "back": {
+      "text": "Вгору"
+    }
+  }
+}

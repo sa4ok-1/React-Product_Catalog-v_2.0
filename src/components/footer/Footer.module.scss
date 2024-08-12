@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,800;1,800&display=swap");
+
+@mixin my-hover($property, $value) {
+  &:hover {
+    #{$property}: $value;
+  }
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: #0f1121;
+  box-sizing: border-box;
+  padding: 32px 16px;
+  font-family: "Montserrat", serif;
+  margin-top: 136px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+  width: 100%;
+}
+
+.logo {
+  margin-bottom: 32px;
+  display: block;
+}
+
+.logoImage {
+  display: block;
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  gap: 32px;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  gap: 32px;
+}
+
+.link {
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 12px;
+  line-height: 11px;
+  color: #f1f2f9;
+}
+
+.goUp {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  align-self: center;
+  cursor: pointer;
+
+  @include my-hover(transform, scale(1.1)); 
+}
+
+.goUpText {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  color: #75767f;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.chevron {
+  height: 32px;
+  width: 32px;
+  margin-left: 16px;
+  background-color: #323542;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapperChevron {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 640px) {
+  .footer {
+    height: 96px;
+  }
+
+  .wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .logo,
+  .links,
+  .goUp {
+    margin-bottom: 0;
+  }
+
+  .links {
+    flex-direction: row;
+    gap: 32px;
+  }
+
+  .goUp {
+    align-self: flex-end;
+  }
+}
+
+@media (max-width: 639px) {
+  .footer {
+    margin-top: 120px;
+  }
+
+  .wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .items {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+  }
+
+  .goUp {
+    align-self: center;
+  }
+}
+
+.light {
+  background-color: white;
+  border-top: 1px solid gray;
+}
+
+.lightLink {
+  color: #89939A;
+}

@@ -1,0 +1,77 @@
+@import "../../../styles/utils/mixins";
+.cartitem {
+  background-color: rgba(22, 24, 39, 1);
+  color: rgba(241, 242, 249, 1);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  @include on-tablet {
+    padding: 23px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+
+  .topContent {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    @include on-tablet {
+      gap: 24px;
+    }
+  }
+  .button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    @include my-hover(transform, scale(1.1));
+    &:focus {
+      outline: none;
+    }
+  }
+  .imageItem {
+    padding: 7px;
+    width: 66px;
+    height: 66px;
+  }
+  .title {
+    font-weight: 600;
+
+    font-size: 14px;
+  }
+  .buttonContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    padding-top: 16px;
+
+    @include on-tablet {
+      padding: 0;
+    }
+    .buttonCounts {
+      display: flex;
+    }
+
+    .icon {
+      border: 1px solid rgba(59, 62, 74, 1);
+      padding: 8px;
+      @include my-hover(transform, scale(1.1));
+    }
+    .active {
+      padding: 8px;
+      background-color: rgba(50, 53, 66, 1);
+    }
+    .count {
+      min-width: 34px;
+      text-align: center;
+      padding: 8px;
+    }
+  }
+}

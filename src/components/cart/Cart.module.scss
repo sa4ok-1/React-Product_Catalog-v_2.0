@@ -1,0 +1,94 @@
+@import "../../styles/utils/mixins";
+
+.cart {
+  @include content-padding-inlain();
+
+  line-height: 21px;
+  font-family: "Mont";
+  font-weight: 800;
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  @include on-tablet {
+    column-gap: 16px;
+    margin-bottom: 64px;
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  @include on-desktop {
+    margin-bottom: 80px;
+    grid-template-columns: repeat(24, 1fr);
+  }
+
+  & .cartList {
+    display: grid;
+    grid-column: 1/-1;
+
+    row-gap: 16px;
+
+    margin-bottom: 32px;
+    margin-top: 32px;
+
+    @include on-desktop {
+      grid-column: 1/16;
+    }
+  }
+  .checkout {
+    grid-column: 1/-1;
+    border: 1px solid rgba(59, 62, 74, 1);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    @include on-desktop {
+      grid-column: 16 /-1;
+      margin-top: 32px;
+      height: 206px;
+    }
+
+    .totalPrice {
+      padding-bottom: 16px;
+      border-bottom: 1px solid rgba(59, 62, 74, 1);
+      .price {
+        font-size: 32px;
+        padding-bottom: 10px;
+      }
+
+      span {
+        font-size: 14px;
+        font-weight: 400;
+        color: rgba(117, 118, 127, 1);
+      }
+    }
+
+    .button {
+      @include my-hover(transform, scale((1.04)));
+      margin-top: 16px;
+      color: rgba(241, 242, 249, 1);
+      border: none;
+      padding: 13.5px 0px;
+      background-color: rgba(144, 91, 255, 1);
+    }
+  }
+}
+
+.cartEmpty {
+  font-family: "Mont";
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  font-size: 25px;
+
+  .cartEmptyImg {
+    width: 250px;
+    height: 200px;
+
+    @include on-tablet {
+      width: 450px;
+      height: 400px;
+    }
+  }
+}

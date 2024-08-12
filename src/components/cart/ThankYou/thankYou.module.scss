@@ -1,0 +1,40 @@
+@import "../../../styles/utils/mixins";
+
+.wrapper {
+  @include content-padding-inlain();
+margin-top: 20px;
+  font-family: "Mont";
+  font-size: 20px;
+  line-height: 30px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-between;
+
+  @include on-tablet {
+    position: relative;
+  }
+
+  .title {
+    @include on-tablet {
+      position: absolute;
+      top: 70px;
+      font-size: 30px;
+      line-height: 20px;
+
+      z-index: 1000;
+    }
+
+    @include on-desktop {
+      font-size: 30px;
+    }
+  }
+
+  .back {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 10px;
+    border: 1px solid;
+     @include my-hover(transform, scale(1.1));
+  }
+}

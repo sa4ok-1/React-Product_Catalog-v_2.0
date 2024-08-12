@@ -1,0 +1,26 @@
+@import "../../styles/utils/mixins";
+
+.currentLocation {
+  @include content-padding-inlain();
+
+  display: flex;
+  align-content: center;
+  margin-top: 24px;
+  gap: 8px;
+
+  font-family: "Mont";
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 15.34px;
+  text-align: left;
+
+  .currentLocationName {
+    font-family: "Mont";
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 15.34px;
+    text-align: left;
+    align-self: center;
+    color: rgba(117, 118, 127, 1);
+  }
+}

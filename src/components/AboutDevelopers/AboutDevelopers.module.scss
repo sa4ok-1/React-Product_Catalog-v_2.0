@@ -1,0 +1,250 @@
+@import "../../styles/utils/mixins";
+
+.aboutDevelopers {
+  max-width: 1136px;
+  margin: 0 auto;
+
+  @include content-padding-inlain();
+
+  .teamTitle {
+    margin-top: 20px;
+    font-family: "Mont", sans-serif;
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 22px;
+    text-align: left;
+    color: #f1f2f9;
+
+    @include on-tablet {
+      font-size: 32px;
+      line-height: 32px;
+    }
+
+    animation: slideInLeft 1.5s ease forwards;
+  }
+
+  .languageTitle {
+    opacity: 0;
+    margin-top: 10px;
+    font-family: "Mont", sans-serif;
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 22px;
+    text-align: left;
+    color: #75767F;
+
+    @include on-tablet {
+      font-size: 32px;
+      line-height: 32px;
+    }
+
+    animation: slideInLeft 1.5s ease 1s forwards;
+  }
+}
+
+.team {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  @include on-tablet {
+    gap: 16px;
+  }
+
+  @include on-tablet-medium {
+    justify-content: space-evenly;
+    gap: 25px;
+  }
+
+  @include on-desktop {
+    justify-content: space-between;
+  }
+}
+
+.teamMember {
+  opacity: 0;
+  margin-top: 30px;
+  width: 288px;
+  height: 372px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  color: #f1f2f9;
+  text-align: center;
+
+  .teamName {
+    margin-top: 275px;
+    font-family: "Mont", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 21px;
+  }
+
+  .teamPosition {
+    font-family: "Mont", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 21px;
+  }
+
+  .teamDescription {
+    margin-top: 2px;
+    font-family: "Mont", sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 21px;
+    color: #89939a;
+  }
+
+  .teamLinks {
+    margin-top: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 15px;
+
+    .teamIconLinkEdin {
+      width: 24px;
+
+      @include my-hover(transform, scale(1.5));
+    }
+
+    .teamIconGitHub {
+      width: 20px;
+      background-color: #f1f2f9;
+      border-radius: 50%;
+
+      @include my-hover(transform, scale(1.5));
+    }
+  }
+}
+
+.teamMember0 {
+  background-image: linear-gradient(
+    rgba(0, 0, 0, 0) 40%,
+    rgba(0, 0, 0, 1) 100%
+  ),
+  url("../../images/icons/devPhoto.jpg");
+}
+
+.teamMember1 {
+  background-image: linear-gradient(
+    rgba(0, 0, 0, 0) 40%,
+    rgba(0, 0, 0, 0.8) 100%
+  ),
+  url("../../images/icons/devPhoto-1.webp");
+}
+
+.teamMember2 {
+  background-image: linear-gradient(
+    rgba(0, 0, 0, 0) 40%,
+    rgba(0, 0, 0, 0.8) 100%
+  ),
+  url("../../images/icons/devPhoto-2.jpg");
+}
+
+.teamMember3 {
+  background-image: linear-gradient(
+    rgba(0, 0, 0, 0) 40%,
+    rgba(0, 0, 0, 0.8) 100%
+  ),
+  url("../../images/icons/devPhoto-3.png");
+}
+
+.teamMember4 {
+  background-image: linear-gradient(
+    rgba(0, 0, 0, 0) 40%,
+    rgba(0, 0, 0, 0.8) 100%
+  ),
+  url("../../images/icons/devPhoto-4.jpg");
+}
+
+.teamMember5 {
+  background-image: linear-gradient(
+    rgba(0, 0, 0, 0) 40%,
+    rgba(0, 0, 0, 0.8) 100%
+  ),
+  url("../../images/icons/devPhoto-5.jpg");
+}
+
+.ambitiousTitle {
+  margin-top: 25px;
+  font-family: "Mont", sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 21px;
+  text-align: left;
+  color: #75767F;
+
+  @include on-tablet {
+    font-size: 32px;
+    line-height: 32px;
+  }
+}
+
+.goalTitle {
+  margin-top: 10px;
+  font-family: "Mont", sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 21px;
+  text-align: left;
+  color: #f1f2f9;
+
+  @include on-tablet {
+    font-size: 32px;
+    line-height: 32px;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInBottom {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.teamMember {
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+
+
+.slideInLeft {
+  animation-name: slideInLeft;
+}
+
+.slideInRight {
+  animation-name: slideInRight;
+}
+
+.slideInBottom {
+  animation-name: slideInBottom;
+}
