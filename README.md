@@ -16,6 +16,7 @@ Nice Gadget is an e-commerce website where users can browse and purchase phones,
 https://github.com/sa4ok-1/React-Product_Catalog-v_2.0/tree/develop
 
 ##Preview 
+
 https://sa4ok-1.github.io/React-Product_Catalog-v_2.0/
 
 ## Launch Instructions
